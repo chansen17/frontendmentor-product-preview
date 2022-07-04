@@ -23,11 +23,21 @@ export default function index() {
         <main className="grid gap-y-12 gap-x-16 grid-cols-1 sm:grid-cols-2 py-8">
           <div className="flex items-center justify-center">
             <figure className="w-full md:max-w-md">
-              <img onClick={() => setIsOpen(!isOpen)} className="h-[500px] w-full object-cover rounded-xl shadow-lg" src={productImg} />
+              <img onClick={() => setIsOpen(!isOpen)} className="h-[500px] w-full object-cover rounded-xl shadow-lg" src={productImg ? productImg : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 animate-spin" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+              )} />
               <figcaption className="grid gap-2 grid-cols-4 mt-4">
-                {images.map((img, i) => (
+                {images ? images.map((img, i) => (
                   <img key={i} onClick={() => setProductImg(img)} src={img} className="h-20 w-full rounded-lg shadow cursor-pointer object-cover" />
-                ))}
+                )) : (
+                  <>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 animate-spin" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                  </>
+                )}
               </figcaption>
             </figure>
             {isOpen && (
