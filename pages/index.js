@@ -59,18 +59,18 @@ export default function index() {
                   <p className="text-slate-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod non fugiat eaque optio quibusdam id? ipsum dolor sit amet consectetur adipisicing elit. Quod non fugiat.</p>
                 </div>
                 <div>
-                <div className="flex flex-col items-start">
-                  <div className="flex items-center space-x-2">
-                    <p className="text-xl md:text-2xl font-black">$125.00</p>
-                    <span className="rounded-md py-1 px-2 font-bold text-xs text-orange-700 bg-orange-300">50%</span>
+                <div className="flex flex-row md:flex-col justify-between">
+                  <div className="flex items-center space-x-4">
+                    <p className="text-xl md:text-2xl font-bold">$125.00</p>
+                    <span className="rounded-md py-1 px-3 text-xs text-orange-600 bg-orange-200 font-bold">50%</span>
                   </div>
                   <div>
-                    <p className="text-xs md:text-sm text-slate-300 font-semibold line-through">$250.00</p>
+                    <span className="line-through text-slate-300 text-sm">$250.00</span>
                   </div>
                 </div>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="inline-flex items-center bg-slate-100 rounded shadow p-1 px-2">
+              <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
+                <div className="flex w-full md:w-auto md:inline-flex md:justify-start items-center justify-between bg-slate-100 rounded shadow p-1 px-2">
                   <button onClick={() => setQuantity(quantity - 1)} className="text-orange-500 font-bold w-8 h-8 grid place-items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M18 12H6" />
@@ -83,7 +83,7 @@ export default function index() {
                   </svg>
                   </button>
                 </div>
-                <button className="w-[150px] text-sm font-semibold justify-center p-2 text-slate-50/90 bg-orange-500 shadow-lg shadow-orange-500/50 rounded-md  flex items-center"><FaShoppingCart className="mr-2"/> Add to cart</button>
+                <button className="w-full md:w-[150px] text-sm font-semibold justify-center py-3 text-slate-50/90 bg-orange-500 shadow-lg shadow-orange-500/50 rounded-md  flex items-center"><FaShoppingCart className="mr-2"/> Add to cart</button>
               </div>
             </article>
           </div>
