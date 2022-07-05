@@ -17,7 +17,7 @@ export default function index() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full h-screen flex flex-col items-start justify-start">
+    <div className="w-full h-screen flex flex-col items-start justify-start font-['Kumbh Sans']">
       <Navbar />
       <div className="max-w-6xl mx-auto pt-40 px-8">
         <main className="grid gap-y-12 gap-x-16 grid-cols-1 sm:grid-cols-2 py-8">
@@ -56,7 +56,7 @@ export default function index() {
                   <h2 className="capitalize text-2xl md:text-3xl lg:text-5xl font-bold text-slate-800">fall limited edition sneakers</h2>
                 </div>
                 <div>
-                  <p className="text-slate-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod non fugiat eaque optio quibusdam id? ipsum dolor sit amet consectetur adipisicing elit. Quod non fugiat.</p>
+                  <p className="text-slate-500">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outter sole, they'll withstand everything the weather can offer.</p>
                 </div>
                 <div>
                 <div className="flex flex-row md:flex-col justify-between">
